@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trung tâm cấu hình giao diện (Demo)</title>
+  <style>
+    body{
+      background:#ffffff;
+      font-family:"Times New Roman", serif;
+    }
+    .khung{
+      width:706px;
+      background:#f9fafb;
+      color:#111827;
+    }
+    .tieu_de{
+      background:#f98000;
+      color:#f9fafb;
+      font-size:18px;
+      font-weight:bold;
+      padding:6px 8px;
+    }
+    .khu_dieu_khien{
+      padding:10px 6px 0 6px;
+      background:#f3f4f6;
+    }
+    .nhom{
+      padding:0 0 26px 0;
+    }
+    .tieu_de_nhom{
+      font-size:16px;
+      color:#111827;
+      background:#e5e7eb;
+      padding:4px 6px;
+    }
+    .lua_chon{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:0 6px 6px 0;
+      font-size:16px;
+      color:#4b5563;
+    }
+    .lua_chon span{
+      display:inline-block;
+      padding:2px 4px;
+      background:#eef2ff;
+      color:#4b5563;
+    }
+    .khu_ket_qua{
+      padding:0 0 6px 0;
+      background:#f3f4f6;
+    }
+    .dong{
+      padding:8px 6px;
+      background:#ffffff;
+      color:#9ca3af;
+      font-size:16px;
+    }
+    .dong + .dong{
+      border-top:12px solid #f3f4f6;
+    }
+    .lua_chon input#theme-light:checked + span{
+      background:#fff8cc;
+      color:#8b5e00;
+    }
+    .lua_chon input#theme-dark:checked + span{
+      background:#111827;
+      color:#f9fafb;
+    }
+    .lua_chon input#color-red:checked + span{
+      background:#fee2e2;
+      color:#991b1b;
+    }
+    .lua_chon input#color-blue:checked + span{
+      background:#dbeafe;
+      color:#1d4ed8;
+    }
+    .lua_chon input#color-green:checked + span{
+      background:#dcfce7;
+      color:#166534;
+    }
+    .lua_chon input#lang-vi:checked + span{
+      background:#bbf7d0;
+      color:#166534;
+    }
+    .lua_chon input#lang-en:checked + span{
+      background:#bfdbfe;
+      color:#1d4ed8;
+    }
+    .lua_chon input#opt-advanced:checked + span{
+      background:#fef3c7;
+      color:#92400e;
+    }
+    .lua_chon input#opt-eco:checked + span{
+      background:#bbf7d0;
+      color:#15803d;
+    }
+    .lua_chon input#opt-warning:checked + span{
+      background:#fee2e2;
+      color:#b91c1c;
+    }
+    .khung:has(#theme-light:checked) .theme_light{
+      background:#fff8cc;
+      color:#111827;
+    }
+    .khung:has(#theme-dark:checked) .theme_dark{
+      background:#111827;
+      color:#f9fafb;
+    }
+    .khung:has(#color-red:checked) .mau_red{
+      background:#fee2e2;
+      color:#7f1d1d;
+    }
+    .khung:has(#color-blue:checked) .mau_blue{
+      background:#dbeafe;
+      color:#1d4ed8;
+    }
+    .khung:has(#color-green:checked) .mau_green{
+      background:#dcfce7;
+      color:#166534;
+    }
+    .khung:has(#lang-vi:checked) .ngon_ngu_vi{
+      color:#166534;
+      font-size:18px;
+    }
+    .khung:has(#lang-en:checked) .ngon_ngu_en{
+      color:#1d4ed8;
+      font-size:18px;
+    }
+    .khung:has(#opt-advanced:checked) .tuy_chon_advanced{
+      background:#fef3c7;
+      color:#92400e;
+    }
+    .khung:has(#opt-eco:checked) .tuy_chon_eco{
+      background:#bbf7d0;
+      color:#166534;
+    }
+    .khung:has(#opt-warning:checked) .tuy_chon_warning{
+      background:#fee2e2;
+      color:#b91c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="khung">
+    <div class="tieu_de">Trung tâm cấu hình giao diện (Demo)</div>
+
+    <div class="khu_dieu_khien">
+      <div class="nhom">
+        <div class="tieu_de_nhom">Chọn giao diện (Theme):</div>
+
+        <label class="lua_chon">
+          <input type="radio" name="theme" id="theme-light" checked>
+          <span>Light</span>
+        </label>
+
+        <label class="lua_chon">
+          <input type="radio" name="theme" id="theme-dark">
+          <span>Dark</span>
+        </label>
+      </div>
+
+      <div class="nhom">
+        <div class="tieu_de_nhom">Chọn màu chủ đạo (Color):</div>
+
+        <label class="lua_chon">
+          <input type="radio" name="color" id="color-red" checked>
+          <span>Red</span>
+        </label>
+
+        <label class="lua_chon">
+          <input type="radio" name="color" id="color-blue">
+          <span>Blue</span>
+        </label>
+
+        <label class="lua_chon">
+          <input type="radio" name="color" id="color-green">
+          <span>Green</span>
+        </label>
+      </div>
+
+      <div class="nhom">
+        <div class="tieu_de_nhom">Chọn ngôn ngữ (Language):</div>
+
+        <label class="lua_chon">
+          <input type="radio" name="language" id="lang-vi" checked>
+          <span>VI</span>
+        </label>
+
+        <label class="lua_chon">
+          <input type="radio" name="language" id="lang-en">
+          <span>EN</span>
+        </label>
+      </div>
+
+      <div class="nhom">
+        <div class="tieu_de_nhom">Tùy chọn bổ sung (Options - Checkbox):</div>
+
+        <label class="lua_chon">
+          <input type="checkbox" id="opt-advanced">
+          <span>Hiển thị mô tả nâng cao</span>
+        </label>
+
+        <label class="lua_chon">
+          <input type="checkbox" id="opt-eco">
+          <span>Bật chế độ Eco</span>
+        </label>
+
+        <label class="lua_chon">
+          <input type="checkbox" id="opt-warning">
+          <span>Hiển thị cảnh báo quan trọng</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="khu_ket_qua">
+      <div class="dong theme_light">Theme Light: Giao diện sáng, chữ đen.</div>
+      <div class="dong theme_dark">Theme Dark: Giao diện tối, chữ sáng.</div>
+
+      <div class="dong mau_red">Màu Red: được nhấn mạnh khi chọn Red.</div>
+      <div class="dong mau_blue">Màu Blue: được nhấn mạnh khi chọn Blue.</div>
+      <div class="dong mau_green">Màu Green: được nhấn mạnh khi chọn Green.</div>
+
+      <div class="dong ngon_ngu_vi">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.</div>
+      <div class="dong ngon_ngu_en">[EN] Hello, world! Khi chọn EN, dòng này rõ hơn.</div>
+
+      <div class="dong tuy_chon_advanced">Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện.</div>
+      <div class="dong tuy_chon_eco">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.</div>
+      <div class="dong tuy_chon_warning">Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</div>
+    </div>
+  </div>
+</body>
+</html>
