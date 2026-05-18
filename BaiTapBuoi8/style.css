@@ -1,0 +1,523 @@
+/* Reset đơn giản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: #000000;
+}
+
+/* Container chính */
+.dashboard {
+    width: 1440px;
+    height: 1039px;
+    padding: 20px;
+    background-color: #000000;
+
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: 331px 337px 337px 337px;
+    grid-template-rows: 293px 203px 198px 245px;
+
+    grid-template-areas:
+        "burger phone notify menu"
+        "burger analytics analytics menu"
+        "person analytics analytics orders"
+        "person rating map map";
+}
+
+/* Card chung */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+/* Màu card */
+.burger-card,
+.menu-card,
+.analytics-card,
+.rating-card {
+    background-color: #ff6400;
+}
+
+.phone-card,
+.notify-card,
+.person-card,
+.orders-card {
+    background-color: #8bb8f6;
+}
+
+/* Vị trí từng card trong grid */
+.burger-card {
+    grid-area: burger;
+}
+
+.phone-card {
+    grid-area: phone;
+}
+
+.notify-card {
+    grid-area: notify;
+}
+
+.menu-card {
+    grid-area: menu;
+}
+
+.analytics-card {
+    grid-area: analytics;
+}
+
+.person-card {
+    grid-area: person;
+}
+
+.orders-card {
+    grid-area: orders;
+}
+
+.rating-card {
+    grid-area: rating;
+}
+
+.map-card {
+    grid-area: map;
+}
+
+/* Hình tròn trang trí */
+.circle {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+}
+
+/* Burger card */
+.burger-card .circle {
+    top: -40px;
+    right: -130px;
+}
+
+.burger-img {
+    width: 380px;
+    position: absolute;
+    top: 60px;
+    left: -35px;
+}
+
+.burger-text {
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+    color: #ffffff;
+}
+
+.burger-text h2 {
+    font-size: 28px;
+}
+
+.burger-text p {
+    font-size: 36px;
+}
+
+/* Phone card */
+.phone-card {
+    display: grid;
+    place-items: center;
+}
+
+.phone {
+    width: 220px;
+    height: 270px;
+    background-color: #000000;
+    border-radius: 35px;
+    padding: 8px;
+
+    display: grid;
+    grid-template-rows: 22px 75px 1fr;
+}
+
+.phone-header {
+    color: #ffffff;
+    font-size: 10px;
+}
+
+.phone-cover {
+    background-color: #222222;
+    border-radius: 24px 24px 0 0;
+    display: grid;
+    place-items: center;
+    font-size: 44px;
+}
+
+.phone-body {
+    background-color: #ffffff;
+    border-radius: 22px;
+    margin-top: -12px;
+    padding: 10px;
+
+    display: grid;
+    gap: 5px;
+}
+
+.phone-body h2,
+.phone-body h3 {
+    font-size: 14px;
+}
+
+.phone-body p,
+.phone-body small,
+.rate,
+.info,
+.phone-buttons button,
+.tags span {
+    font-size: 7px;
+}
+
+.rate,
+.info,
+.phone-buttons button,
+.tags span {
+    background-color: #f1f1f1;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.phone-buttons,
+.tags,
+.phone-food {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+}
+
+.emoji-food {
+    background-color: #ffe2d1;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+
+/* Notification card */
+.notice {
+    width: 294px;
+    height: 63px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 8px;
+    position: absolute;
+    left: 17px;
+
+    display: grid;
+    grid-template-columns: 34px 1fr 60px;
+    gap: 8px;
+    align-items: center;
+}
+
+.n1 {
+    top: 50px;
+}
+
+.n2 {
+    top: 121px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    background-color: #ff6400;
+    border-radius: 9px;
+
+    display: grid;
+    place-items: center;
+}
+
+.notice h3 {
+    font-size: 10px;
+}
+
+.notice p,
+.notice small {
+    font-size: 8px;
+}
+
+.notify-burger {
+    width: 200px;
+    position: absolute;
+    left: 80px;
+    bottom: -50px;
+}
+
+/* Menu card */
+.menu-card {
+    padding: 28px 22px;
+    color: #ffffff;
+
+    display: grid;
+    gap: 18px;
+}
+
+.menu-card h2 {
+    font-size: 28px;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 18px;
+    padding: 12px;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 90px;
+    gap: 10px;
+}
+
+.label {
+    background-color: #eba51b;
+    color: #ffffff;
+    font-size: 7px;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.menu-item h3,
+.menu-item b,
+.menu-item p {
+    font-size: 8px;
+    margin-top: 4px;
+}
+
+.menu-img {
+    background-color: #ffdfc7;
+    border-radius: 16px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 42px;
+    overflow: hidden;
+}
+
+.menu-img img {
+    width: 120px;
+}
+
+.menu-item button {
+    position: absolute;
+    right: 24px;
+    bottom: -12px;
+
+    width: 68px;
+    height: 28px;
+    border: 1px solid #ff6400;
+    border-radius: 8px;
+    background-color: #fff0e8;
+    color: #ff6400;
+    font-weight: bold;
+}
+
+/* Analytics card */
+.analytics-card {
+    color: #ffffff;
+    padding: 40px;
+}
+
+.analytics-card h2 {
+    font-size: 28px;
+}
+
+.analytics-card strong {
+    font-size: 42px;
+}
+
+.chart {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    bottom: 35px;
+    height: 240px;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    align-items: end;
+}
+
+.chart div {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+}
+
+.bar {
+    width: 70px;
+    display: block;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.blue {
+    background-color: #8bb8f6;
+}
+
+.h1 { height: 120px; }
+.h2 { height: 150px; }
+.h3 { height: 180px; }
+.h4 { height: 155px; }
+.h5 { height: 220px; }
+.h6 { height: 170px; }
+.h7 { height: 190px; }
+
+/* Person card */
+.person-circle {
+    top: 35px;
+    left: 35px;
+}
+
+.person-img {
+    width: 330px;
+    position: absolute;
+    left: 5px;
+    bottom: -8px;
+}
+
+.tag {
+    position: absolute;
+    background-color: #ffffff;
+    color: #ff6400;
+    border-radius: 18px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+.tag1 {
+    top: 250px;
+    left: 12px;
+}
+
+.tag2 {
+    top: 312px;
+    right: 12px;
+}
+
+.tag3 {
+    top: 375px;
+    left: 68px;
+}
+
+/* Orders card */
+.order {
+    position: absolute;
+    background-color: #fff1e8;
+    border: 1px solid #ff6400;
+    color: #ff6400;
+    border-radius: 9px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.order b {
+    background-color: #ff6400;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 9px;
+}
+
+.o1 {
+    top: 20px;
+    left: 28px;
+}
+
+.o2 {
+    top: 75px;
+    right: 74px;
+}
+
+.o3 {
+    right: 32px;
+    bottom: 26px;
+}
+
+.green-dot {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #1fd650;
+    position: absolute;
+    left: 38px;
+    bottom: 38px;
+}
+
+/* Rating card */
+.rating-card {
+    padding: 20px;
+    color: #ffffff;
+}
+
+.rating-card h2 {
+    font-size: 28px;
+}
+
+.review {
+    margin-top: 12px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.review-head,
+.review-bottom {
+    display: grid;
+    grid-template-columns: 28px 1fr 34px;
+    gap: 8px;
+    align-items: center;
+}
+
+.review h3 {
+    font-size: 12px;
+}
+
+.review p {
+    font-size: 9px;
+    margin: 12px 0;
+}
+
+/* Map card */
+.map-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pin {
+    position: absolute;
+    left: 325px;
+    top: 87px;
+    background-color: #ff6400;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.arrival {
+    position: absolute;
+    left: 240px;
+    top: 126px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 8px 20px;
+}
