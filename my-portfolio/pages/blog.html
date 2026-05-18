@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Hồ Ngọc Hoàng Anh</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css">
+</head>
+<body id="top">
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>Hồ Ngọc Hoàng Anh</h1>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="mdi mdi-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="mdi mdi-account"></i> About</a></li>
+                <li><a href="skills.html"><i class="mdi mdi-lightbulb-on"></i> Skills</a></li>
+                <li><a href="projects.html"><i class="mdi mdi-folder"></i> Projects</a></li>
+                <li><a href="blog.html"><i class="mdi mdi-post"></i> Blog</a></li>
+                <li><a href="contact.html"><i class="mdi mdi-email"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- ================= BLOG ARTICLE ================= -->
+        <article>
+
+            <header>
+                <h1>Học HTML: Bước đầu để xây dựng website</h1>
+
+                <p>
+                    Ngày đăng:
+                    <time datetime="2026-05-18">18/05/2026</time>
+                </p>
+
+                <p>
+                    Tác giả: <strong>Hồ Ngọc Hoàng Anh</strong>
+                </p>
+
+                <img src="../images/hero-bg.jpg" alt="Ảnh cover bài viết học HTML" width="900" height="400">
+            </header>
+
+            <!-- ================= TABLE OF CONTENTS ================= -->
+            <nav id="table-of-contents">
+                <h2>Mục lục</h2>
+
+                <ol>
+                    <li><a href="#intro">Giới thiệu</a></li>
+                    <li><a href="#why-html">Vì sao nên học HTML?</a></li>
+                    <li><a href="#structure">Cấu trúc cơ bản</a></li>
+                    <li><a href="#code-examples">Ví dụ code</a></li>
+                    <li><a href="#references">Tham khảo</a></li>
+                    <li><a href="#author-info">Thông tin tác giả</a></li>
+                </ol>
+            </nav>
+
+            <!-- ================= INTRO SECTION ================= -->
+            <section id="intro">
+                <h2>1. Giới thiệu</h2>
+
+                <p>
+                    Khi bắt đầu học lập trình web, <strong>HTML</strong> là kiến thức đầu tiên mà người học cần nắm.
+                    HTML giúp tạo cấu trúc nội dung cho một trang web.
+                </p>
+
+                <p>
+                    HTML không phải là ngôn ngữ lập trình xử lý thuật toán, mà là ngôn ngữ đánh dấu.
+                    Nó giúp trình duyệt hiểu đâu là tiêu đề, đoạn văn, hình ảnh, liên kết và form.
+                </p>
+
+                <p>
+                    Với mình, học HTML là bước khởi đầu quan trọng để học tiếp <em>CSS</em>, <em>JavaScript</em> và các công nghệ web khác.
+                </p>
+            </section>
+
+            <!-- ================= WHY HTML SECTION ================= -->
+            <section id="why-html">
+                <h2>2. Vì sao nên học HTML?</h2>
+
+                <p>
+                    HTML giúp người học hiểu cách một website được tổ chức.
+                    Ví dụ, ta có thể nhận biết phần <code>header</code>, <code>main</code> và <code>footer</code>.
+                </p>
+
+                <p>
+                    Một lợi ích khác của HTML là cú pháp dễ học.
+                    Chỉ cần hiểu cách mở thẻ, đóng thẻ và lồng thẻ hợp lý, ta đã có thể tạo một trang web đơn giản.
+                </p>
+
+                <p>
+                    Tuy nhiên, để viết HTML tốt, người học cần chú ý đến <mark>semantic HTML</mark>.
+                    Đây là cách sử dụng đúng thẻ theo ý nghĩa của nội dung.
+                </p>
+
+                <blockquote>
+                    <p>"Code is like humor. When you have to explain it, it’s bad."</p>
+                    <cite>- Cory House</cite>
+                </blockquote>
+            </section>
+
+            <!-- ================= STRUCTURE SECTION ================= -->
+            <section id="structure">
+                <h2>3. Cấu trúc cơ bản của HTML</h2>
+
+                <p>
+                    Một file HTML thường bắt đầu bằng khai báo <code>&lt;!DOCTYPE html&gt;</code>.
+                    Sau đó là thẻ <code>html</code>, bên trong gồm <code>head</code> và <code>body</code>.
+                </p>
+
+                <p>
+                    Phần <code>head</code> chứa thông tin cấu hình như bảng mã, tiêu đề và link CSS.
+                    Phần <code>body</code> chứa nội dung hiển thị trên trình duyệt.
+                </p>
+
+                <p>
+                    Khi viết code, mình thường dùng <kbd>Ctrl</kbd> + <kbd>S</kbd> để lưu file.
+                    Nếu chạy đúng, trình duyệt có thể hiển thị kết quả như:
+                    <samp>Trang web đã được tải thành công</samp>.
+                </p>
+
+                <p>
+                    Một số ký hiệu như H<sub>2</sub>O hoặc HTML<sup>5</sup> có thể được trình bày bằng thẻ
+                    <code>sub</code> và <code>sup</code>.
+                </p>
+            </section>
+
+            <!-- ================= CODE EXAMPLES SECTION ================= -->
+            <section id="code-examples">
+                <h2>4. Ví dụ code</h2>
+
+                <h3>Ví dụ 1: Cấu trúc HTML cơ bản</h3>
+
+                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Trang HTML đầu tiên&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Tiêu đề chính của trang --&gt;
+    &lt;h1&gt;Xin chào HTML&lt;/h1&gt;
+
+    &lt;!-- Đoạn mô tả ngắn --&gt;
+    &lt;p&gt;Đây là trang web đầu tiên của tôi.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <h3>Ví dụ 2: Tạo liên kết và hình ảnh</h3>
+
+                <pre><code class="language-html">&lt;!-- Link mở trong tab mới --&gt;
+&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;
+    Truy cập website
+&lt;/a&gt;
+
+&lt;!-- Hình ảnh có alt text --&gt;
+&lt;img src="images/avatar.png" alt="Ảnh đại diện cá nhân" width="200" height="200"&gt;</code></pre>
+            </section>
+
+            <!-- ================= REFERENCES SECTION ================= -->
+            <section id="references">
+                <h2>5. Tham khảo</h2>
+
+                <ul>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
+                            <cite>MDN Web Docs - HTML</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">
+                            <cite>W3Schools HTML Tutorial</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">
+                            <cite>W3C HTML Validator</cite>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- ================= AUTHOR INFO SECTION ================= -->
+            <section id="author-info">
+                <h2>6. Thông tin tác giả</h2>
+
+                <img src="../images/avatar.png" alt="Ảnh đại diện tác giả Hồ Ngọc Hoàng Anh" width="150" height="150" loading="lazy">
+
+                <h3>Hồ Ngọc Hoàng Anh</h3>
+
+                <p>
+                    Mình là sinh viên yêu thích lập trình, đặc biệt quan tâm đến lập trình web và lập trình thi đấu.
+                </p>
+
+                <address>
+                    Email:
+                    <a href="mailto:hoanganh142005@gmail.com">hoanganh142005@gmail.com</a>
+                    <br>
+                    Điện thoại:
+                    <a href="tel:+84974048067">0974048067</a>
+                    <br>
+                    Địa chỉ: Cổ Nhổi, Hướng Phùng, Quảng Trị
+                </address>
+            </section>
+
+            <p>
+                <a href="#top">Lên đầu trang</a>
+            </p>
+
+            <!-- TODO: Sau này viết thêm bài blog về CSS và JavaScript -->
+
+        </article>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>
+            <small>&copy; 2026 Hồ Ngọc Hoàng Anh. All rights reserved.</small>
+        </p>
+
+        <p>
+            <a href="https://web.facebook.com/hoanganh14012005" target="_blank" rel="noopener noreferrer">
+                <i class="mdi mdi-facebook"></i> Facebook
+            </a>
+            |
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="mdi mdi-instagram"></i> Instagram
+            </a>
+            |
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="mdi mdi-twitter"></i> Twitter/X
+            </a>
+            |
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="mdi mdi-github"></i> Github
+            </a>
+            |
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="mdi mdi-linkedin"></i> LinkedIn
+            </a>
+        </p>
+
+        <p><a href="#top">Lên đầu trang</a></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
