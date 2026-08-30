@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="todo-app">
+
+    <h1>📝 Todo App</h1>
+
+    <!-- Thêm Todo -->
+    <div class="add-todo">
+        <input
+            type="text"
+            id="todo-input"
+            placeholder="Nhập công việc..."
+        >
+        <button id="add-btn">Thêm</button>
+    </div>
+
+    <small class="error">
+        Vui lòng nhập nội dung todo!
+    </small>
+
+    <!-- Filter -->
+    <div class="filters">
+        <button class="filter-btn active">Tất cả</button>
+        <button class="filter-btn">Chưa hoàn thành</button>
+        <button class="filter-btn">Hoàn thành</button>
+    </div>
+
+    <!-- Danh sách -->
+    <ul class="todo-list">
+
+        <li class="todo-item">
+
+            <label class="todo-content">
+
+                <input type="checkbox">
+
+                <span class="text">
+                    Học HTML
+                </span>
+
+            </label>
+
+            <button class="delete-btn">
+                Xóa
+            </button>
+
+        </li>
+
+        <li class="todo-item completed">
+
+            <label class="todo-content">
+
+                <input type="checkbox" checked>
+
+                <span class="text">
+                    Học CSS
+                </span>
+
+            </label>
+
+            <button class="delete-btn">
+                Xóa
+            </button>
+
+        </li>
+
+        <!-- Chế độ edit -->
+        <li class="todo-item editing">
+
+            <input
+                type="text"
+                class="edit-input"
+                value="Học JavaScript"
+            >
+
+            <small class="error">
+                Vui lòng nhập nội dung todo!
+            </small>
+
+        </li>
+
+    </ul>
+
+    <!-- Empty -->
+    <p class="empty">
+        Không có todo nào.
+    </p>
+
+    <!-- Footer -->
+    <div class="footer">
+
+        <span class="count">
+            2 / 5 mục đã hoàn thành
+        </span>
+
+        <button class="clear-btn">
+            Xóa tất cả đã hoàn thành
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>

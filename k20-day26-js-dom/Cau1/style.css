@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+body{
+    background:#edf2f7;
+    display:flex;
+    justify-content:center;
+    padding:50px 15px;
+}
+.todo-app{
+    width:700px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    padding:30px;
+}
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+.add-todo{
+    display:flex;
+    gap:10px;
+}
+.add-todo input{
+    flex:1;
+    padding:12px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+.add-todo button{
+    width:120px;
+    border:none;
+    background:#3b82f6;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+.error{
+    color:#dc2626;
+    display:block;
+    margin-top:6px;
+    min-height:18px;
+}
+.filters{
+    margin:25px 0;
+    display:flex;
+    gap:10px;
+}
+.filter-btn{
+    flex:1;
+    padding:10px;
+    border:none;
+    background:#e5e7eb;
+    cursor:pointer;
+    border-radius:8px;
+}
+.filter-btn.active{
+    background:#3b82f6;
+    color:white;
+}
+.todo-list{
+    list-style:none;
+}
+.todo-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:12px;
+    background:#f8fafc;
+    transition:.3s;
+}
+.todo-item:hover{
+    background:#eef4ff;
+}
+.todo-content{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex:1;
+    cursor:pointer;
+}
+.todo-content input{
+    width:18px;
+    height:18px;
+}
+.text{
+    font-size:18px;
+}
+.completed .text{
+    text-decoration:line-through;
+    color:#999;
+}
+.delete-btn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.delete-btn:hover{
+    background:#dc2626;
+}
+.editing{
+    display:block;
+}
+.edit-input{
+
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    border:1px solid #3b82f6;
+    border-radius:8px;
+}
+.empty{
+    text-align:center;
+    color:#888;
+    margin-top:30px;
+}
+.footer{
+    margin-top:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.count{
+    font-weight:bold;
+}
+
+.clear-btn{
+    border:none;
+    background:#f59e0b;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.clear-btn:hover{
+    background:#d97706;
+}

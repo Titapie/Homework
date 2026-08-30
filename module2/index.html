@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>module2</title>
+    <link rel="stylesheet" href="./src/style.css">
+  </head>
+  <body>
+    <div id="app" class="d-dvh flex flex-col">
+      <header class="h-16">Header</header>
+      <div class="flex flex-1 px-2 gap-2">
+        <aside class="w-1/4">Your libary</aside>
+        <main class="flex-1 rounded-lg bg-background-card px-10">
+          <h2 class="text-2xl  mt-5 font-bold hover:underline hover:cursor-pointer">
+            Album
+          </h2>
+          <div
+    id="album-list"
+    class="-ml-3 mt-2 flex overflow-x-auto scrollbar-none"
+>
+    <div
+        class="shrink-0 rounded-md p-3 w-44 hover:cursor-pointer flex flex-col gap-2 hover:bg-background-card hover..."
+    >
+        <img
+            class="w-full aspect-square object-cover rounded-md"
+            src="https://picsum.photos/200"
+            alt="Album cover"
+        />
+
+        <h3 class="line-clamp-2 text-sm hover:underline">
+            SECRET (feat. Quang Hùng MasterD, CODYNAMVO, CONGB & Wren Evans)
+        </h3>
+
+        <p class="line-clamp-2 text-xs text-foreground-accent">
+            <a href="#!" class="hover:underline">TINH HÀ "SAY HI"</a>
+            <span>, </span>
+            <a href="#!" class="hover:underline">Quang Hùng MasterD</a>
+            <span>, </span>
+            <a href="#!" class="hover:underline">CODYNAMVO</a>
+        </div>
+        </div>
+        </main>
+      </div>
+      <!-- sign up -->
+      <div class="h-16">sign up</div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

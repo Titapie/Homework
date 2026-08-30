@@ -9,11 +9,11 @@ const item2=Object.create(item1,{
     department:{ value:"IT",
         writable:true
     },
-    wage: {value: 15000000,
+    salary: {value: 15000000,
         writable:true
     },
     getInfo:{
-        value:function(){ return `${this.name} làm ở phòng ${this.department} lương ${this.wage}`}}})
+        value:function(){ return `${this.name} làm ở phòng ${this.department} lương ${this.salary}`}}})
 const item3=Object.create(item2,{
     name:{
         value:"Nguyễn Văn A"
@@ -24,7 +24,7 @@ const item3=Object.create(item2,{
      department: {
         value: "IT"
     },
-    wage: {
+    salary: {
         value: 12345678
     }})
 const item4=Object.create(item2,{
@@ -37,7 +37,7 @@ const item4=Object.create(item2,{
     department: {
         value: "IT"
     },
-    wage: {
+    salary: {
         value: 12000000
     }})
 const item5=Object.create(item2,{
@@ -48,9 +48,9 @@ const item5=Object.create(item2,{
         value: 31
     },
     department: {
-        value: "IT"
+        value: "marketing"
     },
-    wage: {
+    salary: {
         value: 12300000
     }})
 const item6=Object.create(item2,{
@@ -63,7 +63,7 @@ const item6=Object.create(item2,{
     department: {
         value: "IT"
     },
-    wage: {
+    salary: {
         value: 99999999
     }})
 const item7=Object.create(item2,{
@@ -74,13 +74,13 @@ const item7=Object.create(item2,{
         value: 33
     },
     department: {
-        value: "IT"
+        value: "Tài chính"
     },
-    wage: {
+    salary: {
         value: 222222222
     }})
 const checkOwnProperty = (items,method)=>{
-    return Object.getOwnPropertyNames(items).includes(method)
+    return Object.hasOwn(items,method)
 }
 
 console.log(item1.introduce());
@@ -89,44 +89,44 @@ console.log(item1.introduce());
 console.log(item2.getInfo());
 // Output: "Nguyễn Văn A làm ở phòng IT, lương 15000000"
 
-console.log(checkOwnProperty(item1,"name")  );
+console.log(checkOwnProperty(item1, "name"));
 // Output: true
-console.log(checkOwnProperty(item1,"introduce"));
+console.log(checkOwnProperty(item1, "introduce"));
 // Output: false
 
-// console.log(Object.getPrototypeOf(item1) === levelTwoProto);
-// // Output: true
-// console.log(Object.getPrototypeOf(levelTwoProto) === baseProto);
-// // Output: true
+console.log(Object.getPrototypeOf(item3) ===  item2);
+// Output: true
+console.log(Object.getPrototypeOf(item2) ===  item1);
+// Output: true
 
-// Object.setPrototypeOf(item4, newProto);
-// console.log(item4.getInfo());
-// // Output: câu mô tả khác hẳn, lấy từ newProto
+Object.setPrototypeOf(item4, {getInfo:function(){ return `câu mô tả khác hẳn, lấy từ newProto`}});
+console.log(item4.getInfo());
+// Output: câu mô tả khác hẳn, lấy từ newProto
 
-// console.log(Object.getOwnPropertyNames(item1));
-// // Output: ["name", "age", "department", "salary"]
+console.log(Object.getOwnPropertyNames(item3));
+// Output: ["name", "age", "department", "salary"]
 
-// console.log(Object.getOwnPropertyDescriptor(item1, "salary"));
-// // Output: { value: 15000000, writable: true, enumerable: true, configurable: true }
+console.log(Object.getOwnPropertyDescriptor(item3, "salary"));
 
-// Object.seal(item2);
-// item2.bonus = 1000000;
-// console.log(item2.bonus);
-// // Output: undefined
 
-// item2.salary = 20000000;
-// console.log(item2.salary);
-// // Output: 20000000
+Object.seal(item3);
+item3.bonus = 1000000;
+console.log(item3.bonus);
+// Output: undefined
 
-// console.log(Object.isSealed(item2));
-// // Output: true
+item3.salary = 20000000;
+console.log(item3.salary);
+// Output: 20000000
 
-// const grouped = Object.groupBy(items, item => item.department);
-// console.log(grouped);
-// // Output: object chứa các mảng item, đã nhóm theo phòng ban
+console.log(Object.isSealed(item3));
+// Output: true
 
-// const lookup = Object.fromEntries([["A001", "Nguyễn Văn A"], ["A002", "Trần Thị B"]]);
-// console.log(lookup);
-// // Output: { A001: "Nguyễn Văn A", A002: "Trần Thị B" }
-// console.log(lookup["A002"]);
+const grouped = Object.groupBy([item1,item2,item3,item4,item5,item6,item7], (item) => { return item.department; });
+console.log(grouped);
+// Output: object chứa các mảng item, đã nhóm theo phòng ban
+
+const lookup = Object.fromEntries([["A001", "Nguyễn Văn A"], ["A002", "Trần Thị B"]]);
+console.log(lookup);
+// Output: { A001: "Nguyễn Văn A", A002: "Trần Thị B" }
+console.log(lookup["A002"]);
 // Output: "Trần Thị B"
